@@ -1,31 +1,3 @@
-
-/*function cliclou(){
-    var titulo = document.querySelector("#texto").value
-    var botao1 = document.querySelector("#botao").value
-    var caixa = document.querySelector('#pp')
-    caixa.innerText = titulo
-}*/
-
-/*var strLista = "igo";
-
-var listaSubstituicao = {
-    a:"ai",
-    e:"enter",
-    i:"imes",
-    o:"ober",
-    u:"ufat"
-}
-
-
-alteracaoLista = strLista.replace(/a|e|i|o|u/gi, function(item){
-    let it = listaSubstituicao[item];
-    let itemLista = it.replace(/(?:^|\s)\S/g, function(elemento) { return elemento.toUpperCase(); });
-    return itemLista;
-});
-console.log(alteracaoLista);*/
-
-
-
 function loadpk(){
     let numero1 = document.getElementById('numero1').value
     url = `https://pokeapi.co/api/v2/pokemon/${numero1}`
@@ -34,8 +6,7 @@ function loadpk(){
 
     .then((data) =>{
         document.getElementById('nome').innerHTML = data['name']
-        let img = data['sprites']['front_default']
-        document.getElementById('pic').setAttribute('src',img)
+        document.getElementById('pic').setAttribute('src',data.sprites.other.dream_world.front_default)
     })
 
     .catch((erro) => {
